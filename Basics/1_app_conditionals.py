@@ -1,8 +1,8 @@
-# Rock vs Paper vs Siccors
+# Rock vs Paper vs Sissors
 import random
 
 # Define options for the pc
-pc_options = ('rock', 'paper', 'sissors')
+pc_options = ('rock', 'paper', 'scissors')
 
 # Define rounds
 max_rounds = 5
@@ -13,13 +13,13 @@ playing = True
 round_number = 0
 
 # Create a Welcome Message
-welcome_str = 'WELCOME TO ROCK, PAPER AND SISSORS'
+welcome_str = 'WELCOME TO ROCK, PAPER AND scissors'
 print('*'*20, welcome_str, '*'*20,)
 
 # Start the game
 while playing:
     # get the options to compare
-    user_selection = input('rock, paper or sissors, make your choose: ')
+    user_selection = input('rock, paper or scissors, make your choose: ')
     pc_selection = random.choice(pc_options)
     round_number +=1
     # normalize the options
@@ -37,21 +37,21 @@ while playing:
             print('pc selection => ', pc_selection)
             print('You Win!!!')
             user_score += 1
-        # paper vs sissors -> sissors wins
-        if(pc_selection == 'sissors'):
+        # paper vs scissors -> scissors wins
+        if(pc_selection == 'scissors'):
             print('+'*10, ' Round #', round_number, '+'*10)
             print('pc selection => ', pc_selection)
             print('You Lose!!!')
             pc_score += 1
-    # define actions for user_selection == sissors
-    elif( user_selection == 'sissors' ):
-        # sissors vs rock -> rock wins
+    # define actions for user_selection == scissors
+    elif( user_selection == 'scissors' ):
+        # scissors vs rock -> rock wins
         if(pc_selection == 'rock'):
             print('+'*10, ' Round #', round_number, '+'*10,)
             print('pc selection => ', pc_selection)
             print('You Lose!!!')
             pc_score += 1
-        # sissors vs paper -> sissors wins
+        # scissors vs paper -> scissors wins
         if(pc_selection == 'paper'):
             print('+'*10, ' Round #', round_number, '+'*10)
             print('pc selection => ', pc_selection)
@@ -59,8 +59,8 @@ while playing:
             user_score += 1
     # define actions for user_selection == rock
     elif( user_selection == 'rock' ):
-        # rock vs sissors -> rock wins
-        if(pc_selection == 'sissors'):
+        # rock vs scissors -> rock wins
+        if(pc_selection == 'scissors'):
             print('+'*10, ' Round #', round_number, '+'*10)
             print('pc selection => ', pc_selection)
             print('You win!!!')

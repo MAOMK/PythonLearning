@@ -1,4 +1,4 @@
-# Rock vs Paper vs Siccors
+# Rock vs Paper vs Sissors
 
 import random
 
@@ -6,14 +6,14 @@ horizontal_line = '*' * 10
 
 # Create a Welcome Message
 def gretting ():
-    welcome_str = ' WELCOME TO ROCK, PAPER AND SISSORS' 
+    welcome_str = ' WELCOME TO ROCK, PAPER AND scissors' 
     return f"{horizontal_line} {welcome_str} {horizontal_line}"
 
 # get the options to compare
 def get_options ():
     # Define options for the pc
-    pc_options = ('rock', 'paper', 'sissors')
-    user_selection = input('rock, paper or sissors, make your choose: ')
+    pc_options = ('rock', 'paper', 'scissors')
+    user_selection = input('rock, paper or scissors, make your choose: ')
     pc_selection = random.choice(pc_options)
     # normalize the options
     user_selection = user_selection.lower()
@@ -50,21 +50,21 @@ def define_winner (user_selection, pc_selection):
         # paper vs rock -> paper wins
         if(pc_selection == 'rock'):
             winner = 'user'            
-        # paper vs sissors -> sissors wins
-        if(pc_selection == 'sissors'):
+        # paper vs scissors -> scissors wins
+        if(pc_selection == 'scissors'):
             winner = 'pc'
-    # define actions for user_selection == sissors
-    elif( user_selection == 'sissors' ):
-        # sissors vs rock -> rock wins
+    # define actions for user_selection == scissors
+    elif( user_selection == 'scissors' ):
+        # scissors vs rock -> rock wins
         if(pc_selection == 'rock'):
             winner = 'pc'
-        # sissors vs paper -> sissors wins
+        # scissors vs paper -> scissors wins
         if(pc_selection == 'paper'):
             winner = 'user'
     # define actions for user_selection == rock
     elif( user_selection == 'rock' ):
-        # rock vs sissors -> rock wins
-        if(pc_selection == 'sissors'):
+        # rock vs scissors -> rock wins
+        if(pc_selection == 'scissors'):
             winner = 'user'
         # rock vs paper -> paper wins
         if(pc_selection == 'paper'):
