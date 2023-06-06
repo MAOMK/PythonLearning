@@ -47,3 +47,4 @@ new_items = list(map(add_taxes, items))
 print(new_items)
 print(items) # Is modified : ERROR!!!! take care!!! line : item['taxes'] = item['price'] * .19
 
+print(type(map(lambda i: i * 2, my_list)))
